@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+img {
+  width: 100%;
+}
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xx-large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.card {
+  width: 30%;
+  background: white;
+  padding: 0.4em;
+  border-radius: 6px;
+  margin-left: 1%;
+}
+
+.card-image {
+  background-image: url(Assets/komodo-banner.jpg);
+  width: 100%;
+  height: 200px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 600;
+  color: black;
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+.description {
+  text-align: justify;
+}
+
+/*Bagian button*/
+
+/* From Uiverse.io by satyamchaudharydev */
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.judul {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: xx-large;
+}
+
+/* Benefit Card */
+
+.pack-container {
+  position: relative;
+  display: flex;
+  max-width: 350px;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: #212121;
+  border: 1px solid #fff;
+  padding: 1.6rem;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin-left: 2%;
+}
+
+.header {
+  position: relative;
+  margin: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.price-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  font-family: sans-serif;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.price-container span:first-child {
+  margin-top: 10px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.price-container span:last-child {
+  align-self: flex-end;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: -10%;
+}
+
+.list span {
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background-color: rgba(255, 255, 255, 0.185);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list span svg {
+  height: 10px;
+  width: 10px;
+}
+
+.list p {
+  display: block;
+  font-family: sans-serif;
+}
+
+.button-container {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.button-container button {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #000;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  width: 10%;
+}
+
+/* Add this media query for handheld devices */
+@media only screen and (max-width: 480px) {
+  /* Adjust font sizes and padding */
+  .judul {
+    font-size: x-large;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .category {
+    font-size: small;
+  }
+
+  .heading {
+    font-size: small;
+  }
+
+  .author {
+    font-size: small;
+  }
+
+  .description {
+    font-size: small;
+  }
+
+  /* Button styles */
+  .button {
+    padding-block: 0.25rem;
+    padding-inline: 0.75rem;
+    font-size: 12px;
+  }
+
+  /* Benefit Card styles */
+  .pack-container {
+    max-width: 250px;
+    padding: 1rem;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 0.75rem;
+  }
+
+  .price-container {
+    font-size: 2rem;
+  }
+
+  .price-container span:first-child {
+    margin-top: 5px;
+    font-size: 1.5rem;
+  }
+
+  .price-container span:last-child {
+    font-size: 1.5rem;
+  }
+
+  .lists {
+    gap: px;
+  }
+
+  .list {
+    gap: 5px;
+  }
+
+  .list span {
+    height: 20px;
+    width: 20px;
+  }
+
+  .list span svg {
+    height: 10px;
+    width: 10px;
+  }
+
+  .button-container {
+    margin-top: 10px;
+  }
+
+  .button-container button {
+    padding: 5px 10px;
+  }
+
+  /* Table styles */
+  table,
+  th,
+  tr,
+  td {
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  th {
+    width: 20%;
+    background-color: yellow;
+  }
+}
+.title-dest {
+  background-color: yellowgreen;
+}
