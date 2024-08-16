@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 img {
   width: 100%;
 }
@@ -17,6 +20,30 @@ img {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.card::-webkit-scrollbar {
+  width: 0;
+  scroll-behavior: smooth;
+}
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.pack-container::-webkit-scrollbar {
+  width: 0;
+  scroll-behavior: smooth;
+}
+
 /* From Uiverse.io by alexmaracinaru */
 .card {
   width: 30%;
@@ -24,10 +51,11 @@ img {
   padding: 0.4em;
   border-radius: 6px;
   margin-left: 1%;
+  position: relative;
+  flex: 1 0 auto;
 }
 
 .card-image {
-  background-image: url(Assets/komodo-banner.jpg);
   width: 100%;
   height: 200px;
   border-radius: 6px 6px 0 0;
@@ -157,10 +185,27 @@ img {
 
 /* Benefit Card */
 
+.next {
+  width: 3%;
+  transform: scaleX(-1);
+}
+
+.back {
+  width: 3%;
+}
+
+.nx {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
 .pack-container {
   position: relative;
   display: flex;
-  max-width: 350px;
+  width: 400px;
+  max-width: 400px;
   flex-direction: column;
   border-radius: 12px;
   background-color: #212121;
@@ -278,6 +323,10 @@ th {
   width: 10%;
 }
 
+.title-dest {
+  background-color: yellowgreen;
+}
+
 /* Add this media query for handheld devices */
 @media only screen and (max-width: 480px) {
   /* Adjust font sizes and padding */
@@ -383,7 +432,7 @@ th {
     width: 20%;
     background-color: yellow;
   }
-}
-.title-dest {
-  background-color: yellowgreen;
+  .title-dest {
+    background-color: yellowgreen;
+  }
 }
